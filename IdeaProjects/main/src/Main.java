@@ -8,9 +8,9 @@ public class Main {
         Random rand = new Random();
 
         while (sterline > 0) {
-            sterlinaToEuro = 1 + (rand.nextDouble() * 0.2); // Calcola il tasso di cambio ogni giorno
+            sterlinaToEuro = 1 + (rand.nextDouble() * 0.2);
             if (sterlinaToEuro > 1.15) {
-                int quantitaDaVendere = Math.min(sterline, 1000); // Vende fino a 1000 sterline o le sterline rimanenti se meno
+                int quantitaDaVendere = Math.min(sterline, 1000);
                 double euro = quantitaDaVendere * sterlinaToEuro;
                 sterline -= quantitaDaVendere;
                 System.out.println("Giorno " + (giorni + 1) + ": Vendute " + quantitaDaVendere + " sterline per " + euro + " euro");
